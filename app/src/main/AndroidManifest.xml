@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.mayikang.wowallet">
+
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- 用于申请友盟社会化分享的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 支付相关的权限 -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".application.MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_app_start_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <meta-data
+            android:name="com.example.mayikang.wowallet.util.GlideMod"
+            android:value="GlideModule" />
+
+        <!-- GaoDe map key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="ecf1cfe6e942d0bd0f230dc53e385902" />
+
+        <!-- 个推 start -->
+
+
+        <!-- 发送推送的 service -->
+        <service
+            android:name=".push.DemoPushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice" />
+
+        <!-- 接收推送的 service -->
+        <service android:name=".push.DemoIntentService" />
+
+        <!-- 个推 end -->
+
+
+        <!-- 外部连接分发页面 -->
+        <activity android:name=".ui.act.SchemeFilterActivity">
+
+            <!-- Scheme -->
+            <intent-filter>
+                <data
+                    android:host="www.wowallet.com"
+                    android:scheme="tjsj" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <!-- App Links -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.wowallet.com"
+                    android:scheme="http" />
+                <data
+                    android:host="www.wowallet.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <!-- 测试页面 -->
+        <activity
+            android:name=".ui.act.TestActivity"
+            android:label="@string/title_activity_test"
+            android:theme="@style/my_style_day" />
+
+        <!-- 注册页1 -->
+        <activity
+            android:name=".ui.act.Register1Activity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 注册页2 -->
+        <activity
+            android:name=".ui.act.Register2Activity"
+            android:theme="@style/my_style_day" />
+        <!-- 登录页 -->
+        <activity
+            android:name=".ui.act.LoginActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/my_style_day" />
+
+        <!-- 忘记密码 -->
+        <activity
+            android:name=".ui.act.ForgetPwdActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 重置密码 -->
+        <activity
+            android:name=".ui.act.ResetPwdActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 启动欢迎页 -->
+        <activity
+            android:name=".ui.act.SplashActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 首页 -->
+        <activity
+            android:name=".ui.act.IndexActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/my_style_day">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 店铺详情页面 -->
+        <activity
+            android:name=".ui.act.StoreActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 项目详情页面 -->
+        <activity
+            android:name=".ui.act.ProjectDetailActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 二维码扫描页面 -->
+        <activity
+            android:name=".ui.act.QRScanActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 提现页面 -->
+        <activity
+            android:name=".ui.act.BalanceActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 确认提现 -->
+        <activity
+            android:name=".ui.act.ConfirmDepositActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 余额页面 -->
+        <activity
+            android:name=".ui.act.BalanceDetailActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 账单 -->
+        <activity
+            android:name=".ui.act.BillActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 加入沃克 -->
+        <activity
+            android:name=".ui.act.JoinWoActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 加入沃克支付代理费 -->
+        <activity
+            android:name=".ui.act.JoinWoPayDelegateActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 确认订单，输入支付金额 -->
+        <activity
+            android:name=".ui.act.ConfirmOrderActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 确认订单详情 -->
+        <activity
+            android:name=".ui.act.ConfirmOrderDetailActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 确认支付，调起支付宝微信 -->
+        <activity
+            android:name=".ui.act.ConfirmPayActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 沃粉 -->
+        <activity
+            android:name=".ui.act.FanActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 消息列表页 -->
+        <activity
+            android:name=".ui.act.MessageListActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 设置 -->
+        <activity
+            android:name=".ui.act.SettingActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 个人资料 -->
+        <activity
+            android:name=".ui.act.UserInfoActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 店铺收藏 -->
+        <activity
+            android:name=".ui.act.CollectionActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 评论列表 -->
+        <activity
+            android:name=".ui.act.CommentListActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 项目列表 -->
+        <activity
+            android:name=".ui.act.ProjectListActivity"
+            android:theme="@style/my_style_day" />
+        <activity
+            android:name=".ui.act.OfficerListActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 修改用户名 -->
+        <activity
+            android:name=".ui.act.ChangeUserNameActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 修改电话号码 -->
+        <activity
+            android:name=".ui.act.ChangeUserPhoneActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 修改用Email -->
+        <activity
+            android:name=".ui.act.ChangeUserEmailActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 修改性别 -->
+        <activity
+            android:name=".ui.act.ChangeUserSexActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 消息详情 -->
+        <activity
+            android:name=".ui.act.MessageInFoActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 店铺收藏 -->
+        <activity
+            android:name=".ui.act.ShopSearchActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 账单明细 -->
+        <activity
+            android:name=".ui.act.BillDetailActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 忘记密码 -->
+        <activity
+            android:name=".ui.act.ForgetPassActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 修改支付密码 -->
+        <activity
+            android:name=".ui.act.PayChangePassActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 订单界面 -->
+        <activity
+            android:name=".ui.act.IndentActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 评论界面 -->
+        <activity
+            android:name=".ui.act.EvaluateActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 浏览相册 -->
+        <activity
+            android:name=".ui.act.GalleryScanActivity"
+            android:theme="@style/my_style_day" />
+        <activity
+            android:name=".ui.act.AddressBookActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 搜索添加好友 -->
+        <activity
+            android:name=".ui.act.AddFriendsActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 好友资料页 -->
+        <activity
+            android:name=".ui.act.UserProfileDetailActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 转账给好友 -->
+        <activity
+            android:name=".ui.act.TransferActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 确认新的电话号码 -->
+        <activity
+            android:name=".ui.act.VerifyNewTelActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 设置支付密码 -->
+        <activity
+            android:name=".ui.act.SetPayPasswordActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 修改登录密码 -->
+        <activity
+            android:name=".ui.act.ChangeLoginPwdActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 绑定新的电话 -->
+        <activity
+            android:name=".ui.act.BindNewTelActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 添加好友 -->
+        <activity
+            android:name=".ui.act.AddFriendMsgActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 忘记支付密码 -->
+        <activity
+            android:name=".ui.act.ForgetPayPasActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 重置支付密码 -->
+        <activity
+            android:name=".ui.act.FrogetPaySureActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 添加好友消息界面 -->
+        <activity
+            android:name=".ui.act.AddFriendsMsgActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 支付成功的详情页面 -->
+        <activity
+            android:name=".ui.act.PayDetailActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 粉丝详情页面 -->
+        <activity
+            android:name=".ui.act.FansMessageActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 三级粉丝 -->
+        <activity
+            android:name=".ui.act.SecondFansActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 二级粉丝 -->
+        <activity
+            android:name=".ui.act.SecondFanListActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 累计消费 -->
+        <activity
+            android:name=".ui.act.AllOrderForm"
+            android:theme="@style/my_style_day" />
+        <!-- 累计分红 -->
+        <activity
+            android:name=".ui.act.DividendActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 代理商选择 -->
+        <activity
+            android:name=".ui.act.ChooseAgentActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 代理商管理 -->
+        <activity
+            android:name=".ui.act.AgentMangeActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 我的全部评价 -->
+        <activity
+            android:name=".ui.act.CommentListMangeActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 订单详情 -->
+        <activity
+            android:name=".ui.act.IndentMessageActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 添加代理店铺 -->
+        <activity
+            android:name=".ui.act.AddAgentStoreActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 修改真实姓名 -->
+        <activity
+            android:name=".ui.act.ChangeRealNameActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 修改支付宝号 -->
+        <activity
+            android:name=".ui.act.ChangeUserAlipayActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 申请状态 -->
+        <activity
+            android:name=".ui.act.AgentApplyStateActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 套餐历史记录 -->
+        <activity
+            android:name=".ui.act.AgentApplyHistoryActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 二级粉丝 -->
+        <activity
+            android:name=".ui.act.FirstFansActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 用户协议 -->
+        <activity
+            android:name=".ui.act.ProtocolActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 商城模式订单详情 -->
+        <activity
+            android:name=".ui.act.OrderDetailMessageActivity"
+            android:theme="@style/my_style_day" />
+        <!-- 商城模式确认订单 -->
+        <activity
+            android:name=".ui.act.ConfirmOrderShopActivity"
+            android:theme="@style/my_style_day" />
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <!-- ******************支付***************************************************** -->
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+
+        <!-- ******************支付end***************************************************** -->
+
+
+        <!-- ******************service***************************************************** -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!-- receiver -->
+        <receiver android:name=".push.PushDealReceiver">
+            <intent-filter>
+                <action android:name="com.wowallet.push.outline" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ******************友盟社会化分享****************************************** -->
+
+
+        <!-- 新浪 -->
+        <activity
+            android:name=".umengapi.WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信支付 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <!-- 腾讯 -->
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="593f5860e88bad67af001237" />
+
+        <!-- ****************************end******************************* -->
+        <!-- Base.Theme.AppCompat.Dialog.Alert -->
+        <activity
+            android:name=".ui.act.TransparentDialogActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/my_act_transparent_dialog" />
+
+        <!-- 选择城市 -->
+        <activity
+            android:name=".ui.act.ChoiceCityActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 收货地址管理 -->
+        <activity
+            android:name=".ui.act.AdressManagerActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 新增编辑收货地址 -->
+        <activity
+            android:name=".ui.act.EditAdressActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 商家店铺2 -->
+        <activity
+            android:name=".ui.act.Store2Activity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 购物车 -->
+        <activity
+            android:name=".ui.act.ShoppingCartActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 确认订单（券） -->
+        <activity
+            android:name=".ui.act.ConfirmOrderTicketActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 全部订单 -->
+        <activity
+            android:name=".ui.act.AllOrdersActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 账户安全 -->
+        <activity
+            android:name=".ui.act.AccountSecurityActivity"
+            android:theme="@style/my_style_day" />
+
+        <!-- 版本信息 -->
+        <activity
+            android:name=".ui.act.VersonActivity"
+            android:theme="@style/my_style_day" />
+
+        <!--关于我们-->
+        <activity android:name=".ui.act.AboutMeActivity"
+            android:theme="@style/my_style_day"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5078ED</color>
+    <color name="colorPrimaryDark">#5078ED</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!--自定义颜色-->
+    <color name="color_primary_blue">#5078ED</color>
+
+    <color name="color_deep_blue">#5078ED</color>
+
+    <color name="color_primary_white">#ffffff</color>
+
+    <color name="color_fade_gray">#efefef</color>
+
+
+    <color name="color_txt_gray">#B4B4B4</color>
+
+    <color name="color_divider_gray">#EFEFEF</color>
+
+
+
+    <color name="color_full_transparent">#90ffffff</color>
+    <color name="half_theme_green">#5053d555</color>
+    <color name="half_transparent">#80000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="theme_green">#53d555</color>
+    <color name="app_fade_gray">#EEEEEE</color>
+    <color name="app_txt_fade_gray">#a2a2a2</color>
+    <color name="app_green">#11cd6e</color>
+    <color name="color_primary_pink">#FF495A</color>
+    <color name="color_primary_black">#000000</color>
+    <color name="color_balance">#4d4b4b</color>
+    <color name="color_text">#6c6b6b</color>
+    <color name="color_index">#666666</color>
+
+
+    <!--popDialog-->
+    <color name="popup_dialog_listview_bg">#eeffffff</color>
+    <color name="popup_dialog_list_pressed">#10000000</color>
+    <color name="popup_dialog_list_normal">#00000000</color>
+    <color name="popup_dialog_btn_pressed">#30000000</color>
+    <color name="popup_dialog_btn_normal">#eeffffff</color>
+    <color name="popup_dialog_list_text_color">#5FA7F7</color>
+    <color name="popup_dialog_btn_text_color">#f15522</color>
+    <color name="popup_dialog_divider_color">#66000000</color>
+
+    <color name="partTranslucent">#39000000</color>
+
+    <!--99,99,99-->
+    <color name="order_detail_Title">#2A2A2A</color>
+
+
+
+
+    <!--友盟-->
+    <color name="umeng_socialize_comments_bg">#F4F4F4</color>
+    <color name="umeng_socialize_color_group">#2c3035</color>
+    <color name="umeng_socialize_list_item_textcolor">#333333</color>
+    <color name="umeng_socialize_list_item_bgcolor">#FFFFFF</color>
+    <color name="umeng_socialize_divider">#E6E6E6</color>
+    <color name="umeng_socialize_text_time">#999999</color>
+    <color name="umeng_socialize_text_title">#464f61</color>
+    <color name="umeng_socialize_text_friends_list">#959696</color>
+    <color name="umeng_socialize_text_share_content">#666666</color>
+    <color name="umeng_socialize_ucenter_bg">#EEEEEE</color>
+    <color name="umeng_socialize_text_ucenter">#595959</color>
+    <color name="umeng_socialize_edit_bg">#C4C4C4</color>
+    <color name="umeng_socialize_grid_divider_line">#F8F8F8</color>
+    <color name="umeng_socialize_web_bg">#F4F4F4</color>
+    <color name="umeng_socialize_shareactivity">#D4E0E5</color>
+    <color name="umeng_socialize_shareactivitydefault">#ffffff</color>
+
+</resources>

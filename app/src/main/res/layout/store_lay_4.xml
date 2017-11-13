@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_primary_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <TextView
+            android:textSize="@dimen/x16"
+            android:textColor="#000000"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_centerVertical="true"
+            android:text="品牌介绍"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:background="@color/color_divider_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <com.hymane.expandtextview.ExpandTextView
+        android:id="@+id/store_lay_4_expand_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/x8"
+        android:paddingLeft="@dimen/x10"
+        android:paddingRight="@dimen/x10"
+        android:paddingTop="@dimen/x8"
+        app:contentTextSize="14sp"
+        app:expandHint="点击展开"
+        app:foldHint="点击收回"
+        app:textContentColor="?android:attr/textColorPrimary"
+        app:textHintColor="?android:attr/textColorPrimary"
+        app:textTitleColor="?android:attr/textColorSecondary"
+        app:titleTextSize="@dimen/x16"/>
+
+    <TextView
+        android:background="@color/color_divider_gray"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x10" />
+</LinearLayout>

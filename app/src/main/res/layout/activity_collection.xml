@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.act.CollectionActivity">
+    <!--title-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:background="@color/color_deep_blue">
+
+        <LinearLayout
+            android:id="@+id/mafens_linear_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/x5"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/collection_iv_back"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_margin="@dimen/x6"
+                android:src="@mipmap/icon_left_white_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/collection_linear_centent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="收藏店铺"
+                android:textColor="@color/color_primary_white"
+                android:textSize="@dimen/x16" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.cjj.MaterialRefreshLayout
+                android:id="@+id/collection_qrefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/act_collection_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null">
+                </android.support.v7.widget.RecyclerView>
+            </com.cjj.MaterialRefreshLayout>
+        </RelativeLayout>
+        <!--刷新-->
+
+
+
+        <!--没有收藏内容的布局-->
+        <LinearLayout
+
+            android:id="@+id/collection_linea_on"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_fade_gray"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x100"
+                android:layout_marginTop="@dimen/x50"
+                android:src="@mipmap/icon_no_collection_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x20"
+                android:gravity="center"
+                android:text="您暂时还没有收藏任何店铺"
+                android:textSize="@dimen/x14" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="可以去首页逛逛"
+                android:textSize="@dimen/x14" />
+
+            <Button
+                android:id="@+id/act_collection_btn_scan"
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x35"
+                android:layout_marginTop="@dimen/x40"
+                android:background="@color/color_primary_white"
+                android:text="先逛逛"
+                android:textSize="@dimen/x14" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

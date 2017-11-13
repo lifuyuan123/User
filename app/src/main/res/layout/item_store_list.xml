@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_primary_white">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100">
+        <RelativeLayout
+            android:layout_width="@dimen/x100"
+            android:layout_height="match_parent">
+            <ImageView
+
+                android:scaleType="fitXY"
+                android:src="@mipmap/bg_home_test_2"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/x80"
+                android:layout_height="@dimen/x80" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_weight="1.5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:maxEms="10"
+                    android:textSize="@dimen/x17"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:text="圣保美肤中心"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:maxEms="10"
+                    android:textSize="@dimen/x14"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="#98999A"
+                    android:text="985m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/x14"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:textColor="#98999A"
+                    android:text="[多城市] 全场参与返利，满500返100"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@mipmap/icon_store_collected"
+                            android:layout_width="@dimen/x20"
+                            android:layout_height="@dimen/x20" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginLeft="@dimen/x15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@mipmap/icon_to_share_gray"
+                            android:layout_width="@dimen/x20"
+                            android:layout_height="@dimen/x20" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

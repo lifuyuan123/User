@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_scan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:background="@color/color_primary_blue"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40">
+            <ImageView
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x220" />
+        </RelativeLayout>
+
+        <TextView
+            android:textSize="@dimen/x18"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/color_primary_white"
+            android:text="扫一扫"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_alignParentRight="true"
+
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_flash_white"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x220" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <SurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/head"/>
+
+
+    <RelativeLayout
+
+        android:id="@+id/layout_contain"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="@dimen/x130"
+        android:layout_marginRight="@dimen/x70"
+        android:layout_marginLeft="@dimen/x70">
+
+
+
+        <View
+            android:layout_width="@dimen/scan_frame_height"
+            android:layout_height="@dimen/scan_frame_width"
+            android:background="@color/color_primary_blue" />
+
+        <View
+            android:layout_width="@dimen/scan_frame_width"
+            android:layout_height="@dimen/scan_frame_height"
+            android:background="@color/color_primary_blue" />
+
+        <View
+            android:layout_width="@dimen/scan_frame_height"
+            android:layout_height="@dimen/scan_frame_width"
+            android:layout_alignParentRight="true"
+            android:background="@color/color_primary_blue" />
+
+        <View
+            android:layout_width="@dimen/scan_frame_width"
+            android:layout_height="@dimen/scan_frame_height"
+            android:layout_alignParentRight="true"
+            android:background="@color/color_primary_blue" />
+
+        <View
+            android:layout_width="@dimen/scan_frame_height"
+            android:layout_height="@dimen/scan_frame_width"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_primary_blue" />
+
+        <View
+            android:id="@+id/bottom_edge"
+            android:layout_width="@dimen/scan_frame_width"
+            android:layout_height="@dimen/scan_frame_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_primary_blue" />
+
+        <View
+            android:layout_width="@dimen/scan_frame_height"
+            android:layout_height="@dimen/scan_frame_width"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/color_primary_blue" />
+
+        <View
+            android:layout_width="@dimen/scan_frame_width"
+            android:layout_height="@dimen/scan_frame_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/color_primary_blue" />
+
+        <com.example.mayikang.wowallet.ui.xwidget.view.ScanLineView
+        android:id="@+id/scanline"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+
+
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/x5"
+        android:paddingTop="@dimen/x5"
+        android:paddingRight="@dimen/x10"
+        android:paddingLeft="@dimen/x10"
+        android:background="@drawable/x_full_black_retangle_border"
+        android:layout_marginBottom="@dimen/x100"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerInParent="true"
+            android:text="将店家二维码置于框内扫描"
+            android:textColor="@color/color_primary_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mayikang.wowallet.ui.act.AdressManagerActivity">
+    <!--title-->
+    <RelativeLayout
+        android:background="@color/color_primary_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/storemanage_linear_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_margin="@dimen/x10"
+                android:id="@+id/storemanage_iv_back"
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="管理收货地址"
+                android:textSize="@dimen/x16"
+                android:textColor="@color/color_primary_white"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_add_adress"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|right"
+            android:layout_width="@dimen/x50"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginRight="@dimen/x10"
+                android:text="添加"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <com.cjj.MaterialRefreshLayout
+        android:id="@+id/adress_mrl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/adress_rv"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+    </com.cjj.MaterialRefreshLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/adressNo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x10"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80"
+            android:src="@drawable/ic_error"
+            android:layout_marginTop="@dimen/x120"
+            />
+        <TextView
+            android:layout_width="@dimen/x180"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/x10"
+            android:text="暂无收货地址"
+            android:textSize="@dimen/x14"
+            android:textColor="@color/text_color"
+            />
+    </LinearLayout>
+</LinearLayout>

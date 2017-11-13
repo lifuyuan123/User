@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EFEFEF"
+    tools:context="com.example.mayikang.wowallet.ui.act.AddFriendMsgActivity">
+
+    <RelativeLayout
+        android:background="@color/color_primary_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:textSize="@dimen/x18"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:text="详细资料"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/x20"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x80">
+        <RelativeLayout
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/addfriends_msg_civ_logo"
+                android:src="@mipmap/icon_default_portrait"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/x60"
+                android:layout_height="@dimen/x60" />
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="@dimen/x10"
+            android:paddingBottom="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:id="@+id/addfriends_msg_user_name"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/x16"
+                    android:textColor="#000000"
+                    android:text="haha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:id="@+id/addfriends_msg_phone"
+                    android:text="手机号：123456790"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/x14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/x20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <TextView
+            android:layout_marginLeft="@dimen/x10"
+            android:textSize="@dimen/x14"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:text="真实姓名"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/addfriends_msg_real_name"
+            android:singleLine="true"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/x10"
+            android:textSize="@dimen/x14"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:text="波老师"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/x20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <TextView
+            android:layout_marginLeft="@dimen/x10"
+            android:textSize="@dimen/x14"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:text="邮箱"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/addfriends_msg_email"
+            android:singleLine="true"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/x10"
+            android:textSize="@dimen/x14"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:text="chris-jason1224@gmail.com"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_transfer"
+        android:layout_marginTop="@dimen/x40"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginLeft="@dimen/x20"
+        android:textSize="@dimen/x16"
+        android:textColor="@color/white"
+        android:text="添加好友"
+        android:background="@color/color_primary_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40" />
+
+
+</LinearLayout>

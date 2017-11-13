@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_protocol"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mayikang.wowallet.ui.act.ProtocolActivity">
+
+    <RelativeLayout
+        android:background="@color/color_primary_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <RelativeLayout
+            android:id="@+id/protocol_back"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </RelativeLayout>
+        <TextView
+            android:textSize="@dimen/x18"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:text="惠生活用户协议"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.tencent.smtt.sdk.WebView
+            android:id="@+id/protocol_webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

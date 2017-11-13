@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.mayikang.wowallet.ui.act.EditAdressActivity">
+
+    <!--title-->
+    <RelativeLayout
+        android:background="@color/color_primary_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/storemanage_linear_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_margin="@dimen/x10"
+                android:id="@+id/storemanage_iv_back"
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_add_edit_adress"
+                android:text="新增收货地址"
+                android:textSize="@dimen/x16"
+                android:textColor="@color/color_primary_white"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/edt_addadress_name"
+            android:layout_marginLeft="@dimen/x15"
+            android:background="@null"
+            android:singleLine="true"
+            android:inputType="text"
+            android:hint="收货人姓名"
+            android:textColor="#808080"
+            android:textSize="@dimen/x14"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/x15"
+            android:background="@color/app_fade_gray"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1" />
+
+        <EditText
+            android:id="@+id/edt_addadress_phone"
+            android:layout_marginLeft="@dimen/x15"
+            android:background="@null"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:hint="请输入手机号码"
+            android:textColor="#808080"
+            android:textSize="@dimen/x14"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/x10"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rela_choice_adress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40">
+            <TextView
+                android:textColor="#202020"
+                android:textSize="@dimen/x14"
+                android:layout_marginLeft="@dimen/x15"
+                android:text="省、市、区"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_adress"
+                    android:textSize="@dimen/x14"
+                    android:layout_marginRight="@dimen/x10"
+                    android:text="四川省成都市武侯区"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginRight="@dimen/x15"
+                    android:src="@drawable/ic_next"
+                    android:layout_width="@dimen/x13"
+                    android:layout_height="@dimen/x13" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginLeft="@dimen/x15"
+            android:background="@color/app_fade_gray"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1" />
+
+        <EditText
+            android:id="@+id/edt_postalcode"
+            android:layout_marginLeft="@dimen/x15"
+            android:background="@null"
+            android:singleLine="true"
+            android:inputType="number"
+            android:hint="邮政编码"
+            android:textColor="#808080"
+            android:textSize="@dimen/x14"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/x15"
+            android:background="@color/app_fade_gray"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1" />
+
+        <EditText
+            android:id="@+id/edt_adress"
+            android:layout_marginLeft="@dimen/x15"
+            android:background="@null"
+            android:inputType="textMultiLine"
+            android:hint="详细地址"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginBottom="@dimen/x10"
+            android:gravity="top|left"
+            android:layout_marginRight="@dimen/x15"
+            android:lineSpacingExtra="@dimen/x3"
+            android:textColor="#808080"
+            android:textSize="@dimen/x14"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_adress_save"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@drawable/button_backgroud"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/x15"
+        android:layout_marginRight="@dimen/x15"
+        android:layout_height="@dimen/x40">
+        <TextView
+            android:textSize="@dimen/x16"
+            android:gravity="center"
+            android:textColor="@color/color_primary_white"
+            android:text="保存"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

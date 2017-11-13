@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/color_primary_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/store_lay_to_all_comment_rl_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <TextView
+            android:id="@+id/store_lay_to_all_comment_Title"
+            android:textSize="@dimen/x16"
+            android:textColor="#00B0A2"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_centerVertical="true"
+            android:text="查看全部评价"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/store_lay_to_all_comment_ImgLayout"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/icon_arrow_gray_right"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

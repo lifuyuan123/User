@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--头部栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:background="@color/color_deep_blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="朋友"
+            android:textColor="@color/color_primary_white"
+            android:textSize="@dimen/x18" />
+
+        <RelativeLayout
+            android:id="@+id/right_relative_address_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/right_relative_address_add">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/right_iv_address_list"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/adress_list" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_relative_address_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x5">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/right_iv_address_add"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x5"
+                android:src="@drawable/addfriend" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--搜素栏-->
+    <LinearLayout
+        android:visibility="gone"
+        android:background="#f5f4f4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50">
+        <LinearLayout
+            android:id="@+id/linear_serch"
+            android:background="@drawable/myfriend_edit_query"
+            android:layout_margin="@dimen/x10"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/serch"
+                android:layout_marginTop="@dimen/x6"
+                android:layout_marginBottom="@dimen/x6"
+                android:layout_width="@dimen/x40"
+                android:layout_height="@dimen/x40" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--刷新-->
+    <LinearLayout
+        android:id="@+id/friends_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/friend_qrefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--listview-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ListView
+                        android:divider="@null"
+                        android:id="@+id/myfriend_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></ListView>
+                </LinearLayout>
+            </LinearLayout>
+        </com.cjj.MaterialRefreshLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/friendsNo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x10"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80"
+            android:src="@drawable/ic_error"
+            android:layout_marginTop="@dimen/x120"
+            />
+        <TextView
+            android:layout_width="@dimen/x180"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/x10"
+            android:text="暂无好友转账纪录"
+            android:textSize="@dimen/x14"
+            android:textColor="@color/text_color"
+            />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

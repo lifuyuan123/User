@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mine_join"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context="com.example.mayikang.wowallet.ui.act.JoinWoActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+        android:orientation="horizontal"
+        android:background="@color/color_primary_blue"
+        >
+        <RelativeLayout
+            android:layout_width="@dimen/x40"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/mine_join_back"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imageView2" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/x40"
+            android:layout_height="match_parent"
+            android:text="加入沃克"
+            android:gravity="center"
+            android:textColor="@color/color_primary_white"
+            android:textSize="@dimen/x18"
+            android:id="@+id/textView2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/x250"
+        android:layout_height="@dimen/x280"
+        android:background="@mipmap/ic_joinback"
+        android:layout_marginTop="@dimen/x30"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x120"
+            android:layout_marginTop="@dimen/x50"
+            android:text="注册为平台会员后，任意消费3000元，或直接缴纳代理费可成为分享者。获得平台提供唯一分享链接和邀请码。发送邀请码给你的朋友鼓励他们成为沃钱包的用户，当您邀请好友注册并成功消费，你将获得平台额外的返利。"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:textColor="@color/color_primary_white"
+            android:textSize="@dimen/x12"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您消费的总金额(元)："
+            android:paddingLeft="@dimen/x25"
+            android:textColor="@color/color_primary_white"
+            android:layout_marginTop="@dimen/x10"
+            android:textSize="@dimen/x13"
+            />
+        <TextView
+            android:id="@+id/join_consume_money"
+            android:layout_width="@dimen/x200"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_cloud"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x10"
+            android:text="¥0.00"
+            android:gravity="center"
+            android:textColor="@color/color_primary_pink"
+            android:textSize="@dimen/x17"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+            <Button
+                android:id="@+id/act_join_wo_to_purchase"
+                android:layout_width="@dimen/x300"
+                android:layout_height="@dimen/x40"
+                android:text="去消费"
+                android:background="@drawable/ic_button_shape"
+                android:textSize="@dimen/x15"
+                android:textColor="@color/color_primary_white"
+                />
+            <Button
+                android:id="@+id/mine_join_confirmOrderBtn"
+                android:layout_width="@dimen/x300"
+                android:layout_height="@dimen/x40"
+                android:text="缴纳代理费"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_marginBottom="@dimen/x20"
+                android:background="@drawable/ic_button_shapes"
+                android:textSize="@dimen/x15"
+                android:textColor="@color/color_primary_white"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

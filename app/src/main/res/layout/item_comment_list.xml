@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_primary_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/x10"
+        android:paddingTop="@dimen/x10">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:orientation="vertical">
+
+            <!--第一排-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="@dimen/x60"
+                    android:layout_height="match_parent">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/item_comment_list_userIcon"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/icon_test_user_portrait"
+                        android:layout_width="@dimen/x60"
+                        android:layout_height="@dimen/x60" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/x5"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x30">
+
+                        <TextView
+                            android:id="@+id/item_comment_list_user_name"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="#466A8A"
+                            android:textSize="@dimen/x16" />
+
+                        <TextView
+                            android:id="@+id/item_comment_list_time"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/color_txt_gray"
+                            android:textSize="@dimen/x12" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x5"
+                        android:orientation="horizontal">
+
+
+                        <com.github.ornolfr.ratingview.RatingView
+                            android:id="@+id/item_comment_list_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/x5"
+                            app:drawable_empty="@mipmap/icon_star_empty"
+                            app:drawable_filled="@mipmap/icon_star_full"
+                            app:drawable_half="@mipmap/icon_star_half"
+                            app:drawable_margin="2dp"
+                            app:drawable_size="@dimen/x16"
+                            app:is_indicator="true"
+                            app:max_count="5"
+                            app:rating="0" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item_comment_list_comment"
+                    android:lineSpacingExtra="@dimen/x5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/x14" />
+
+            </RelativeLayout>
+            
+            <LinearLayout
+                android:layout_marginTop="@dimen/x10"
+                android:background="@color/app_fade_gray"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x80"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                >
+                <LinearLayout
+                    android:layout_width="@dimen/x80"
+                    android:layout_height="@dimen/x80"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/item_comment_list_storeIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_app_start_logo"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/item_comment_list_storeName"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="圣保罗美肤中心"
+                        android:textSize="@dimen/x15"
+                        android:textColor="@color/text_color"
+                        />
+                    <TextView
+                        android:id="@+id/item_comment_list_body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_marginTop="@dimen/x10"
+                        android:text="[多城市] 全场参加返利，满50返100"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            
+
+            <LinearLayout
+                android:id="@+id/item_comment_list_photo_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x80"
+                android:layout_marginTop="@dimen/x30"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/item_comment_list_photo_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:layout_marginRight="@dimen/x5"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/item_comment_list_photo_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/item_comment_list_photo_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/store_lay_7_rv_comment_photo_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="@dimen/x5"
+                        android:layout_marginRight="@dimen/x5"
+                        android:background="@drawable/x_full_black_retangle_border"
+                        android:paddingLeft="@dimen/x5"
+                        android:paddingRight="@dimen/x5">
+
+                        <TextView
+                            android:id="@+id/item_comment_list_photo_total"
+                            android:layout_width="@dimen/x20"
+                            android:layout_height="@dimen/x20"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/color_primary_white" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x10"
+        android:background="@color/color_divider_gray" />
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/color_primary_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="@dimen/x10"
+            android:background="@color/color_divider_gray"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+    <LinearLayout
+        android:id="@+id/store_lay_5_ll_container"
+        android:paddingLeft="@dimen/x10"
+        android:paddingTop="@dimen/x10"
+        android:paddingBottom="@dimen/x10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x80">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/store_lay_5_iv"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/bg_home_test_6"
+                android:layout_width="@dimen/x80"
+                android:layout_height="@dimen/x60" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/x5"
+                android:layout_weight="7"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    <TextView
+                        android:id="@+id/store_lay_5_tv_type"
+                        android:textColor="#F8943C"
+                        android:textSize="@dimen/x12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textSize="@dimen/x12"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    <TextView
+                        android:id="@+id/store_lay_5_tv_name"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textSize="@dimen/x14"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/icon_arrow_gray_right"
+                    android:layout_width="@dimen/x15"
+                    android:layout_height="@dimen/x15" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="@dimen/x10"
+        android:background="@color/color_divider_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+
+
+</LinearLayout>

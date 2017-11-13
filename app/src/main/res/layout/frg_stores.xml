@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--title-->
+    <RelativeLayout
+        android:background="@color/color_primary_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/x6"
+            android:layout_marginBottom="@dimen/x6"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/shops_title_query"
+            android:layout_width="@dimen/x210"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/serch_shops"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x5"
+                android:layout_width="@dimen/x16"
+                android:layout_height="@dimen/x16" />
+            <TextView
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:text="请输入店铺名称进行搜索"
+                android:textColor="@color/color_primary_white"
+                android:textSize="@dimen/x12"
+                android:id="@+id/shops_tv_serch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.yyydjk.library.DropDownMenu
+        android:id="@+id/dropDownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ddmenuTextSize="@dimen/x14"
+        app:ddtextUnselectedColor="@color/text_color"
+        app:ddtextSelectedColor="@color/color_primary_blue"
+        app:dddividerColor="@color/app_fade_gray"
+        app:ddunderlineColor="@color/app_fade_gray"
+        app:ddmenuMenuHeightPercent="0.6"
+        app:ddmenuSelectedIcon="@mipmap/drop_down_selected_icon"
+        app:ddmaskColor="#80000000"
+        app:ddmenuBackgroundColor="@color/white"
+        app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon" />
+
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_forget_pay_pas"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mayikang.wowallet.ui.act.ForgetPayPasActivity">
+    <!--title-->
+    <RelativeLayout
+        android:background="@color/color_deep_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <LinearLayout
+            android:id="@+id/froget_pay_back"
+            android:layout_margin="@dimen/x5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_margin="@dimen/x6"
+                android:src="@drawable/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="忘记支付密码"
+                android:textSize="@dimen/x16"
+                android:textColor="@color/color_primary_white"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/color_fade_gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--输入手机号-->
+        <RelativeLayout
+            android:background="@drawable/x_normal_white_white_retangle_border"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/x15"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40">
+
+            <EditText
+                android:id="@+id/froget_pay_phoneEdt"
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_marginLeft="@dimen/x10"
+                android:hint="请输入手机号"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+        <!--输入验证码-->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/x15"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40">
+            <RelativeLayout
+                android:background="@drawable/x_normal_white_white_retangle_border"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <EditText
+                    android:id="@+id/froget_pay_imgNumber"
+                    android:textSize="@dimen/x15"
+                    android:gravity="center_vertical"
+                    android:hint="请输入图片验证码"
+                    android:layout_marginRight="@dimen/x10"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/froget_pay_img"
+                android:layout_marginLeft="@dimen/x15"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/froget_pay_sendmsg"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_marginLeft="@dimen/x20"
+            android:textSize="@dimen/x16"
+            android:textColor="@color/color_primary_white"
+            android:text="发送验证短信"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@drawable/x_full_retangle_blue_border"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40" />
+    </LinearLayout>
+</LinearLayout>

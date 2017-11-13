@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_primary_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x70"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/store_lay_2_tv_store_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="#454545"
+                    android:textSize="@dimen/x18"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/x10">
+
+                <com.github.ornolfr.ratingview.RatingView
+                    android:id="@+id/store_lay_2_rv_store_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/x10"
+                    app:drawable_empty="@mipmap/icon_star_empty"
+                    app:drawable_filled="@mipmap/icon_star_full"
+                    app:drawable_half="@mipmap/icon_star_half"
+                    app:drawable_margin="2dp"
+                    app:drawable_size="@dimen/x16"
+                    app:is_indicator="true"
+                    app:max_count="5"
+                    app:rating="0" />
+
+                <TextView
+                    android:id="@+id/store_lay_2_tv_store_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/x2"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxEms="4"
+                    android:singleLine="true"
+                    android:textColor="#F8943C" />
+
+                <TextView
+                    android:id="@+id/store_lay_2_tv_store_average"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/color_txt_gray" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/store_lay_2_rl_to_Pay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginRight="@dimen/x5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/x_grandual_pink_retangle_border"
+                android:gravity="center"
+                android:paddingBottom="@dimen/x10"
+                android:paddingLeft="@dimen/x8"
+                android:paddingRight="@dimen/x8"
+                android:paddingTop="@dimen/x10"
+                android:text="立即付款"
+                android:textColor="@color/color_primary_white"
+                android:textSize="@dimen/x14" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/color_primary_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--<TextView-->
+        <!--android:background="#EEEFF0"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/x10" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x180"
+        android:background="@mipmap/bg_home_lay1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x120"
+            android:layout_marginTop="@dimen/x20">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+                <!--累计消费-->
+                <LinearLayout
+                    android:id="@+id/home_lay_1_ll_expend"
+                    android:layout_width="@dimen/x120"
+                    android:layout_height="@dimen/x120"
+                    android:background="@mipmap/bg_consume_blue"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/home_lay_1_consume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x60"
+                        android:background="@drawable/x_full_retangle_blue_border_2"
+                        android:ellipsize="end"
+                        android:maxWidth="@dimen/x90"
+                        android:paddingBottom="@dimen/x1"
+                        android:paddingLeft="@dimen/x5"
+                        android:paddingRight="@dimen/x5"
+                        android:paddingTop="@dimen/x1"
+                        android:singleLine="true"
+                        android:text="￥0"
+                        android:textColor="@color/color_primary_white"
+                        android:textSize="@dimen/x16" />
+                </LinearLayout>
+
+                <!--间距-->
+                <TextView
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="match_parent" />
+
+                <!--累计分红-->
+                <LinearLayout
+                    android:id="@+id/home_lay_1_ll_profit"
+                    android:layout_width="@dimen/x120"
+                    android:layout_height="@dimen/x120"
+                    android:background="@mipmap/bg_profit_pink"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/home_lay_1_bonus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x60"
+                        android:background="@drawable/x_full_retangle_pink_border_2"
+                        android:paddingBottom="@dimen/x1"
+                        android:paddingLeft="@dimen/x5"
+                        android:paddingRight="@dimen/x5"
+                        android:paddingTop="@dimen/x1"
+                        android:text="￥0"
+                        android:textColor="@color/color_primary_white"
+                        android:textSize="@dimen/x16" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40">
+
+            <TextView
+                android:id="@+id/home_lay_1_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="账户余额：￥0.00"
+                android:textColor="@color/color_primary_white"
+                android:textSize="@dimen/x14" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

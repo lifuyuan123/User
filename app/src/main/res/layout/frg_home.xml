@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/color_primary_blue"
+        >
+       <LinearLayout
+           android:id="@+id/home_location_layout"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_marginLeft="@dimen/x5"
+           android:orientation="horizontal"
+           android:gravity="center_vertical"
+           android:layout_marginRight="@dimen/x3"
+           >
+           <ImageView
+               android:layout_width="@dimen/x15"
+               android:layout_height="@dimen/x15"
+               android:src="@drawable/ic_defult_location"
+               />
+           <TextView
+               android:id="@+id/home_location_txt"
+               android:layout_width="@dimen/x40"
+               android:layout_height="wrap_content"
+               android:text="武侯区"
+               android:textColor="@color/white"
+               android:layout_marginLeft="@dimen/x1"
+               android:lines="1"
+               android:ellipsize="end"
+               />
+           <ImageView
+               android:layout_width="@dimen/x10"
+               android:layout_height="@dimen/x10"
+               android:src="@drawable/ic_defult_go"
+               />
+       </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_search_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/x30"
+            android:background="@drawable/home_search_bg"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <ImageView
+                android:layout_width="@dimen/x17"
+                android:layout_height="@dimen/x17"
+                android:layout_marginLeft="@dimen/x10"
+                android:src="@drawable/ic_home_search"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击搜索店铺或商品"
+                android:layout_marginLeft="@dimen/x10"
+                android:textColor="@color/app_txt_fade_gray"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/home_rl_message"
+            android:layout_width="@dimen/x40"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/home_lay1_iv_message"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/icon_message_white" />
+
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_lay1_iv_message"
+                    android:layout_marginTop="@dimen/x2"
+                    android:text="消息"
+                    android:textColor="@color/color_primary_white"
+                    android:textSize="@dimen/x8" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/frg_home_dataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/frg_home_xrv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+        </com.cjj.MaterialRefreshLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

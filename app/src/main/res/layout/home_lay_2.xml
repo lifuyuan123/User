@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/color_primary_white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <LinearLayout
+        android:layout_marginTop="@dimen/x20"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--付钱-->
+        <LinearLayout
+            android:id="@+id/home_ll_pay"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/icon_home_pay"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/x45"
+                android:layout_height="@dimen/x45" />
+            <TextView
+                android:layout_marginTop="@dimen/x10"
+                android:gravity="center"
+                android:text="付钱"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!--提现-->
+        <LinearLayout
+            android:id="@+id/home_ll_deposit"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/icon_home_extract"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/x45"
+                android:layout_height="@dimen/x45"  />
+            <TextView
+                android:layout_marginTop="@dimen/x10"
+                android:gravity="center"
+                android:text="提现"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!--账单-->
+        <LinearLayout
+            android:id="@+id/home_ll_bill"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/icon_home_bill"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/x45"
+                android:layout_height="@dimen/x45"  />
+            <TextView
+                android:layout_marginTop="@dimen/x10"
+                android:gravity="center"
+                android:text="账单"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!--加入沃克-->
+        <LinearLayout
+            android:id="@+id/home_ll_join"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/icon_home_join"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/x45"
+                android:layout_height="@dimen/x45"  />
+            <TextView
+                android:layout_marginTop="@dimen/x10"
+                android:gravity="center"
+                android:text="加入沃客"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/x20"
+        android:layout_marginTop="@dimen/x20"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--粉丝-->
+        <LinearLayout
+            android:id="@+id/home_ll_fan"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+
+                android:src="@mipmap/icon_home_fan"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/x45"
+                android:layout_height="@dimen/x45" />
+            <TextView
+                android:layout_marginTop="@dimen/x10"
+                android:gravity="center"
+                android:text="沃粉"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!--分享-->
+        <LinearLayout
+            android:id="@+id/home_ll_share"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/icon_home_share"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/x45"
+                android:layout_height="@dimen/x45"  />
+            <TextView
+                android:layout_marginTop="@dimen/x10"
+                android:gravity="center"
+                android:text="分享"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!--订单-->
+        <LinearLayout
+            android:id="@+id/home_ll_order"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/icon_home_order"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/x45"
+                android:layout_height="@dimen/x45"  />
+            <TextView
+                android:layout_marginTop="@dimen/x10"
+                android:gravity="center"
+                android:text="订单"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!--加入沃克-->
+        <LinearLayout
+            android:id="@+id/home_ll_agent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/ic_agent"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/x45"
+                android:layout_height="@dimen/x45"  />
+            <TextView
+                android:layout_marginTop="@dimen/x10"
+                android:gravity="center"
+                android:text="加入代理商"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:background="#EEEFF0"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x10" />
+
+</LinearLayout>

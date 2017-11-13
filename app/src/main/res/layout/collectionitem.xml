@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sctjsj.basemodule.base.ui.layout.SwipeMenuLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    app:ios="true"
+    app:leftSwipe="true"
+    app:swipeEnable="true">
+    <RelativeLayout
+        android:id="@+id/item_collection_rl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100">
+        <ImageView
+            android:id="@+id/collection_iv"
+            android:src="@drawable/ic_ownicon"
+            android:layout_margin="@dimen/x10"
+            android:layout_width="@dimen/x100"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x15"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/collection_iv"
+            android:id="@+id/collection_tv_title"
+            android:text="店铺标题店铺标题店铺标题"
+            android:textSize="@dimen/x14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x5"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/collection_iv"
+            android:layout_below="@+id/collection_tv_title"
+            android:id="@+id/collection_tv_content"
+            android:text="店铺内容"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <Button
+        android:textSize="@dimen/x16"
+        android:id="@+id/btnDelete"
+        android:layout_width="@dimen/x80"
+        android:layout_height="match_parent"
+        android:background="@color/red_btn_bg_color"
+        android:text="删除"
+        android:textColor="@android:color/white"/>
+</com.sctjsj.basemodule.base.ui.layout.SwipeMenuLayout>

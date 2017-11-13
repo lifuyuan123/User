@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_marginTop="@dimen/x5"
+        android:layout_marginBottom="@dimen/x5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/item_tv_type"
+                android:textColor="@color/color_balance"
+                android:gravity="center"
+                android:text="转账"
+                android:textSize="@dimen/x16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="@dimen/x14"
+                android:id="@+id/item_tv_time"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="2017-4-23"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="@dimen/x5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/item_tv_money"
+                android:textSize="@dimen/x16"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="+10.00"
+                android:textColor="@color/color_primary_black"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

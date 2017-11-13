@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_primary_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:background="@color/color_divider_gray"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x10" />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.github.ornolfr.ratingview.RatingView
+                android:layout_marginLeft="@dimen/x5"
+                android:id="@+id/store_lay_comment_store_title_rv"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:drawable_half="@mipmap/icon_star_half"
+                app:drawable_empty="@mipmap/icon_star_empty"
+                app:drawable_filled="@mipmap/icon_star_full"
+                app:drawable_margin="2dp"
+                app:drawable_size="@dimen/x16"
+                app:is_indicator="true"
+                app:max_count="5"
+                app:rating="0" />
+
+            <TextView
+                android:id="@+id/store_lay_comment_store_title_tv_score"
+                android:layout_marginLeft="@dimen/x2"
+                android:layout_gravity="bottom"
+                android:textColor="#F8943C"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxEms="4"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginRight="@dimen/x10"
+                android:id="@+id/store_lay_comment_store_title_tv_num"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/x14"
+                android:gravity="center"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/icon_arrow_gray_right"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:background="@color/color_divider_gray"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1" />
+
+</LinearLayout>

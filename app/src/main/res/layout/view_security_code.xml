@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x50"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:inputType="numberPassword"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_marginLeft="@dimen/x5"
+            android:textSize="@dimen/x18"
+            android:background="@mipmap/bg_verify"
+            android:textColor="@color/color_primary_blue"
+            android:gravity="center"
+            android:id="@+id/item_code_iv1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:inputType="numberPassword"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_marginLeft="@dimen/x5"
+            android:textSize="@dimen/x18"
+            android:background="@mipmap/bg_verify"
+            android:textColor="@color/color_primary_blue"
+            android:gravity="center"
+            android:id="@+id/item_code_iv2"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:inputType="numberPassword"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_marginLeft="@dimen/x5"
+            android:textSize="@dimen/x18"
+            android:background="@mipmap/bg_verify"
+            android:textColor="@color/color_primary_blue"
+            android:gravity="center"
+            android:id="@+id/item_code_iv3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:inputType="numberPassword"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_marginLeft="@dimen/x5"
+            android:textSize="@dimen/x18"
+            android:background="@mipmap/bg_verify"
+            android:textColor="@color/color_primary_blue"
+            android:gravity="center"
+            android:id="@+id/item_code_iv4"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:inputType="numberPassword"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_marginLeft="@dimen/x5"
+            android:textSize="@dimen/x18"
+            android:background="@mipmap/bg_verify"
+            android:textColor="@color/color_primary_blue"
+            android:gravity="center"
+            android:id="@+id/item_code_iv5"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:inputType="numberPassword"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_marginLeft="@dimen/x5"
+            android:textSize="@dimen/x18"
+            android:background="@mipmap/bg_verify"
+            android:textColor="@color/color_primary_blue"
+            android:gravity="center"
+            android:id="@+id/item_code_iv6"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/item_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:background="@android:color/transparent"
+        android:inputType="number" />
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_first_fans"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:orientation="vertical"
+    tools:context="com.example.mayikang.wowallet.ui.act.FirstFansActivity">
+
+    <RelativeLayout
+        android:background="@color/color_deep_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/first_fans_back"
+            android:layout_margin="@dimen/x5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_margin="@dimen/x6"
+                android:id="@+id/myfans_iv_back"
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/myfens_linear_centent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="粉丝团队列表"
+                android:textSize="@dimen/x16"
+                android:textColor="@color/color_primary_white"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--刷新-->
+    <LinearLayout
+        android:id="@+id/first_fans_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_fade_gray"
+        >
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/first_fans_qrefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/first_fans_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+        </com.cjj.MaterialRefreshLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/first_fans_No_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x10"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80"
+            android:src="@drawable/ic_error"
+            android:layout_marginTop="@dimen/x120"
+            />
+        <TextView
+            android:layout_width="@dimen/x180"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/x10"
+            android:text="暂无团队"
+            android:textSize="@dimen/x14"
+            android:textColor="@color/text_color"
+            />
+    </LinearLayout>
+</LinearLayout>

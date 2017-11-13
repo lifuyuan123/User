@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dividend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:orientation="vertical"
+    tools:context="com.example.mayikang.wowallet.ui.act.DividendActivity">
+    <RelativeLayout
+        android:background="@color/color_primary_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+
+        <RelativeLayout
+            android:id="@+id/divident_back"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:textSize="@dimen/x18"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:text="累计奖金"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:background="@color/color_primary_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:id="@+id/order_all_ll"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/order_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="订单返利"
+                android:gravity="center"
+                android:textSize="@dimen/x14"
+                android:textColor="@color/color_primary_blue"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fans_ll"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/fans_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="分销提成"
+                android:gravity="center"
+                android:textSize="@dimen/x14"
+                android:textColor="@color/color_primary_black"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/order_txtbum"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/x2"
+            android:background="@color/color_primary_blue"
+            />
+
+        <TextView
+            android:id="@+id/fans_txtbum"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/x2"
+            android:background="@color/color_fade_gray"
+            />
+    </LinearLayout>
+
+
+
+    <!--刷新-->
+    <LinearLayout
+        android:id="@+id/divident_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_fade_gray"
+        >
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/divident_qrefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/divident_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            </android.support.v7.widget.RecyclerView>
+        </com.cjj.MaterialRefreshLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/divident_No_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x10"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80"
+            android:src="@drawable/ic_error"
+            android:layout_marginTop="@dimen/x120"
+            />
+        <TextView
+            android:layout_width="@dimen/x180"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/x10"
+            android:text="暂无记录"
+            android:textSize="@dimen/x14"
+            android:textColor="@color/text_color"
+            />
+    </LinearLayout>
+</LinearLayout>

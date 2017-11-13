@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_primary_blue"
+    tools:context="com.example.mayikang.wowallet.ui.act.Register1Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <RelativeLayout
+            android:id="@+id/rela_back"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40">
+            <ImageView
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--大 logo-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x150">
+        <ImageView
+            android:src="@mipmap/ic_login_icon"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x100" />
+    </RelativeLayout>
+
+    <!--手机号-->
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:background="@drawable/x_normal_white_blue_retangle_border"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <EditText
+            android:id="@+id/edt_phone"
+            android:inputType="text"
+            android:maxLength="11"
+            android:textSize="@dimen/x15"
+            android:layout_centerInParent="true"
+            android:textColorHint="@color/color_primary_white"
+            android:textColor="@color/color_primary_white"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号码"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_marginLeft="@dimen/x10"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <!--图片验证码-->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/x15"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <RelativeLayout
+            android:background="@drawable/x_normal_white_blue_retangle_border"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/edt_pic_code"
+                android:textSize="@dimen/x15"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColor="@color/color_primary_white"
+                android:layout_centerInParent="true"
+                android:textColorHint="@color/color_primary_white"
+                android:gravity="center_vertical"
+                android:hint="请输入图片验证码"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_marginLeft="@dimen/x10"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/regist1_rela_piccode"
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--手机验证码-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/x15"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <RelativeLayout
+            android:background="@drawable/x_normal_white_blue_retangle_border"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <EditText
+                android:maxLength="6"
+                android:id="@+id/edt_phone_code"
+                android:textSize="@dimen/x15"
+                android:inputType="number"
+                android:layout_centerInParent="true"
+                android:textColor="@color/color_primary_white"
+                android:textColorHint="@color/color_primary_white"
+                android:gravity="center_vertical"
+                android:hint="请输入短信验证码"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_marginLeft="@dimen/x10"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/regist_rela_getphone_code"
+            android:background="@drawable/x_full_retangle_deep_blue_border"
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/regist_tv_getphone_code"
+                android:layout_centerInParent="true"
+                android:textColor="@color/color_primary_white"
+                android:gravity="center"
+                android:text="@string/get_verify_code_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--下一步-->
+    <Button
+        android:id="@+id/act_register1_btn_go_next"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginLeft="@dimen/x20"
+        android:textSize="@dimen/x16"
+        android:textColor="@color/color_primary_white"
+        android:text="下一步"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@drawable/x_full_retangle_deep_blue_border"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/act_register1_tv_to_login"
+        android:layout_marginBottom="@dimen/x10"
+        android:textColor="@color/color_primary_white"
+        android:text="我有帐号，立即登录>>"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+
+</LinearLayout>

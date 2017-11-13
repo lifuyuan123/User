@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mayikang.wowallet.ui.act.StoreActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:background="@color/color_primary_blue">
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="商家店铺"
+            android:textColor="@color/color_primary_white"
+            android:textSize="@dimen/x18" />
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/x10"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/act_store_rl_collect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="visible"
+                    android:id="@+id/act_store_iv_collect"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_store_collect_white"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20" />
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/act_store_iv_collected"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_store_collected"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/act_store_rl_open_share"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_store_share_white"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.cjj.MaterialRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:clipToPadding="true"
+            android:background="@color/color_primary_white"
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </com.cjj.MaterialRefreshLayout>
+</LinearLayout>

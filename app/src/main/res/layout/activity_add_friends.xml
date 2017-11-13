@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mayikang.wowallet.ui.act.AddFriendsActivity">
+
+    <!--title-->
+    <RelativeLayout
+        android:background="@color/color_deep_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/add_friends_back"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_width="@dimen/x40"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/x6"
+            android:layout_marginBottom="@dimen/x6"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/shops_title_query"
+            android:layout_width="@dimen/x210"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/serch_shops"
+                android:layout_width="@dimen/x15"
+                android:layout_height="@dimen/x15"
+                android:layout_marginLeft="@dimen/x10"
+                />
+
+            <EditText
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="请输入用户名称进行搜索"
+                android:textColorHint="@color/color_primary_white"
+                android:textColor="@color/color_primary_white"
+                android:textSize="@dimen/x12"
+                android:id="@+id/add_friends_edit_serch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/shopsearch_iv_delete"
+                android:layout_marginLeft="@dimen/x5"
+                android:layout_marginRight="@dimen/x7"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:src="@drawable/ic_del_search"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/x3"
+            android:layout_marginBottom="@dimen/x3"
+            android:layout_marginRight="@dimen/x10"
+            android:id="@+id/shops_linear_message"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/add_friends_search"
+                android:text="搜索"
+                android:gravity="center"
+                android:textSize="@dimen/x14"
+                android:drawablePadding="@dimen/x2"
+                android:textColor="@color/color_primary_white"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/add_friends_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x10"
+        android:background="@color/white"
+        >
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/seach_friends_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/add_friends_rcv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.cjj.MaterialRefreshLayout>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/x10"
+        android:id="@+id/add_friends_nosearch_layout"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/x100"
+            android:layout_marginTop="@dimen/x150"
+            android:src="@mipmap/icon_no_collection_gray"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x10"
+            android:text="未搜索到相关的用户"
+            android:textSize="@dimen/x13"
+            />
+    </LinearLayout>
+
+</LinearLayout>

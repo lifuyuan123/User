@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:background="@color/color_primary_white"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x50">
+    <RelativeLayout
+
+        android:layout_marginLeft="@dimen/x5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/myfans_item_iv"
+            android:src="@drawable/icon"
+            android:layout_margin="@dimen/x5"
+            android:layout_width="@dimen/x50"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/myfans_item_phone"
+            android:layout_toRightOf="@+id/myfans_item_iv"
+            android:gravity="center"
+            android:text="188****3313"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:singleLine="true"
+            android:gravity="center"
+            android:text="2017-04-23 12:30:45"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_alignParentRight="true"
+            android:id="@+id/myfans_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x10">
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

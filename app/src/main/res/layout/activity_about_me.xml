@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mayikang.wowallet.ui.act.AboutMeActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x45"
+        android:orientation="horizontal"
+        android:background="@color/color_primary_blue"
+        >
+        <RelativeLayout
+            android:layout_width="@dimen/x40"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/aboutMe_back"
+            >
+            <ImageView
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:src="@mipmap/icon_left_white_arrow"
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/x40"
+            android:layout_height="match_parent"
+            android:text="关于我们"
+            android:gravity="center"
+            android:textColor="@color/color_primary_white"
+            android:textSize="@dimen/x18"
+            />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:scaleType="fitXY"
+            android:background="@mipmap/icon_app_start_logo"
+            android:layout_marginTop="@dimen/x15"
+            android:layout_width="@dimen/x70"
+            android:layout_height="@dimen/x70" />
+        <TextView
+            android:layout_marginTop="@dimen/x20"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/x12"
+            android:layout_marginBottom="@dimen/x15"
+            android:text="惠生活1.0.1版"
+            android:id="@+id/tv_aboutMe_verson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/x10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/aboutme_lin_clause"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/x10"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/x14"
+                android:textColor="@color/color_primary_black"
+                android:text="使用条款及隐私协议"
+                android:layout_width="0dp"
+            android:layout_height="@dimen/x40" />
+            <ImageView
+                android:layout_marginRight="@dimen/x10"
+                android:src="@mipmap/icon_arrow_gray_right"
+                android:layout_width="@dimen/x12"
+                android:layout_height="@dimen/x12" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginBottom="@dimen/x20"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="四川沃德最惠网络科技有限公司 版权所有"
+            android:textColor="@color/color_primary_black"
+            android:textSize="@dimen/x10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

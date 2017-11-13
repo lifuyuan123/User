@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="#00000000"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/x50"
+            android:id="@+id/store2No_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x10"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="@dimen/x80"
+                android:layout_height="@dimen/x80"
+                android:src="@drawable/ic_error"
+                />
+            <TextView
+                android:layout_width="@dimen/x180"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/x10"
+                android:text="暂无数据"
+                android:textSize="@dimen/x14"
+                android:textColor="@color/text_color"
+                />
+        </LinearLayout>
+
+        <com.cjj.MaterialRefreshLayout
+            android:layout_marginBottom="@dimen/x50"
+            android:id="@+id/refresh"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:clipToPadding="true"
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+        </com.cjj.MaterialRefreshLayout>
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center|right"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x50">
+            <TextView
+                android:id="@+id/store2_tv_allmoney"
+                android:layout_marginRight="@dimen/x15"
+                android:textColor="#FB4644"
+                android:gravity="center"
+                android:text="￥588.8"
+                android:textSize="@dimen/x18"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/store2_tv_comit"
+                android:gravity="center"
+                android:text="提交订单"
+                android:background="#4F77F3"
+                android:textSize="@dimen/x16"
+                android:textColor="@color/white"
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x50" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_shoppingcart"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginBottom="@dimen/x25"
+            android:orientation="vertical"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/x50">
+            <ImageView
+                android:src="@drawable/icon_shoppingcart"
+                android:layout_width="@dimen/x50"
+                android:layout_height="@dimen/x50" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

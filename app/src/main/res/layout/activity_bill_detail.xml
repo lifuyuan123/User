@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mayikang.wowallet.ui.act.BillDetailActivity">
+
+    <!--title-->
+    <RelativeLayout
+        android:background="@color/color_deep_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/shops_linear_back"
+            android:layout_margin="@dimen/x5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_margin="@dimen/x6"
+                android:id="@+id/shops_iv_back"
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="账单详情"
+                android:textSize="@dimen/x16"
+                android:textColor="@color/color_primary_white"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@color/color_primary_white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--店铺名-->
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/x10"
+            android:layout_height="@dimen/x60">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/billing_iv_shopicon"
+                    android:src="@mipmap/icon_default_portrait"
+                    android:layout_width="@dimen/x60"
+                    android:layout_height="@dimen/x60" />
+                <TextView
+                    android:textColor="@color/color_primary_black"
+                    android:id="@+id/act_bill_detail_tv_storeName"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:gravity="center_vertical"
+                    android:text="store"
+                    android:textSize="@dimen/x18"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <!--money-->
+        <TextView
+            android:id="@+id/money"
+            android:gravity="center"
+            android:text="*"
+            android:textSize="@dimen/x24"
+            android:textColor="@color/color_primary_black"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30" />
+        <TextView
+            android:id="@+id/billing_tv_istransaction"
+            android:gravity="center"
+            android:text="交易成功"
+            android:textSize="@dimen/x14"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30" />
+
+        <!--付款-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30">
+            <TextView
+                android:textSize="@dimen/x14"
+                android:gravity="center"
+                android:text="付款方式"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/x14"
+                android:id="@+id/billing_tv_payment_method"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/x10"
+                android:text="余额转账"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+        <!--转账-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30">
+            <TextView
+                android:gravity="center"
+                android:text="转账说明"
+                android:textSize="@dimen/x14"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:textSize="@dimen/x14"
+                android:id="@+id/billing_tv_transfer_instructions"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x10"
+                android:gravity="center"
+                android:text=""
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <!--对方转账-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30">
+            <TextView
+                android:textSize="@dimen/x14"
+                android:gravity="center"
+                android:text="对方账号"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:textSize="@dimen/x14"
+                android:id="@+id/billing_tv_account"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x10"
+                android:gravity="center"
+                android:text=""
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginBottom="@dimen/x10"
+            android:layout_marginLeft="@dimen/x10"
+            android:background="@color/color_txt_gray"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
+
+        <!--创建时间-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30"
+            android:layout_marginBottom="@dimen/x10">
+            <TextView
+                android:gravity="center"
+                android:text="创建时间"
+                android:textSize="@dimen/x14"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:textSize="@dimen/x14"
+                android:id="@+id/billing_tv_time"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

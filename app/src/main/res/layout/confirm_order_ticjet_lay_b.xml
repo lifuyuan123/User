@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/con_order_ticket_lay_b_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x120"
+        android:background="@color/app_fade_gray"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/con_order_ticket_lay_b_img"
+            android:layout_width="@dimen/x90"
+            android:layout_height="@dimen/x90"
+            android:layout_marginTop="@dimen/x15"
+            android:layout_marginLeft="@dimen/x15"
+            android:src="@drawable/icon_ticket"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_marginTop="@dimen/x15"
+            android:layout_marginBottom="@dimen/x15"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/con_order_ticket_lay_b_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="羊妮连衣裙女球冬2017新款羊毛保暖中长款裙子显瘦不规则太白长裙"
+                android:lines="2"
+                android:ellipsize="end"
+                android:textColor="#3E3E3E"
+                />
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/con_order_shop_lay_b_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:text="颜色分类：棕色"
+                android:textSize="@dimen/x12"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x20"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/con_order_ticket_lay_b_Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥399.00"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="#FB4E44"
+                    />
+                <TextView
+                    android:id="@+id/con_order_ticket_lay_b_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="×1"
+                    android:gravity="right"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

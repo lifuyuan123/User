@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_agent_mange"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mayikang.wowallet.ui.act.AgentMangeActivity">
+
+    <RelativeLayout
+        android:background="@color/color_primary_blue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40">
+        <RelativeLayout
+            android:id="@+id/agent_mange_back"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_left_white_arrow"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20" />
+        </RelativeLayout>
+
+        <TextView
+            android:textSize="@dimen/x18"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:text="代理商管理"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/agent_mange_addStore"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x14"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+    <com.cjj.MaterialRefreshLayout
+      android:id="@+id/agent_message_refresh"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/agent_mange_rv"
+            />
+    </com.cjj.MaterialRefreshLayout>
+</LinearLayout>
